@@ -24,22 +24,24 @@ public class ArticleList extends HttpServlet {
 						  throws ServletException, IOException {
 		
 		HttpSession accueil = request.getSession();
-		User user = (User) accueil.getAttribute("USER");
 		
-		Article article = (Article) accueil.getAttribute("TITLE");
+		Article article1 = (Article) accueil.getAttribute("TITLE1");
+		Article article2 = (Article) accueil.getAttribute("TITLE2");
 		
-		if(user == null) {
+		/*
+		if(article1 == null) {
 			response.sendRedirect(this.getServletContext().getContextPath() +"/accueil");
 			return;
 		}
-		
+		*/
 		
 		ServletOutputStream out = response.getOutputStream();
 		
 		out.println("<html>");
 		out.println("<body>");
 		out.println("<h1>Liste des articles</h1>");
-		out.println("<p>Titre : "+ article.getTitle() +", ID : " + article.getId() + "</p>");
+		out.println("<p>Titre : "+ article1.getTitle() +", ID : " + article1.getId() + "</p>");
+		out.println("<p>Titre : "+ article2.getTitle() +", ID : " + article2.getId() + "</p>");
 		out.println("</body>");
 		out.println("</html>");
 		
