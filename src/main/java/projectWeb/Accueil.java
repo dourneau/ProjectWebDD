@@ -25,15 +25,17 @@ public class Accueil extends HttpServlet{
 
 		User user = new User("Dupont",2,"a.dupont@yahoo.com","user"); 
 		accueil.setAttribute("USER",user);
-
 		
+		Article article = new Article("Par monts et par vaux",1);
+		accueil.setAttribute("TITLE",article);
+
 		ServletOutputStream out = response.getOutputStream();
 		out.println("<html>");
 		out.println("<body>");
 		out.println("<h1>Accueil</h1>");
 		out.println("<h3>Vous êtes bien connecté sur notre site</h3>");
-		out.println("<a href='user-quality'>Accéder aux qualités utilisateur <br>/a>");
-		out.println("<a href='paper-title'>Accéder à la liste des articles</a>");
+		out.println("<a href='user-quality'>Accéder aux qualités utilisateur <br></a>");
+		out.println("<a href='paper-list'>Accéder à la liste des articles</a>");
 		out.println("</body>");
 		out.println("</html>");
 	}
