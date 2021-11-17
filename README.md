@@ -1,7 +1,11 @@
-# demo-git-banque
+# ProjectDD
 
 # Description du projet
-Ce projet contient les exercices de la programmation orientée objet en Java, relatifs à la banque
+Ce projet consiste à créer une page Web qui donne accès à deux autres pages Web.
+La première donne accès aux qualités de l'utilisateur et la seconde, à une liste d'articles 
 
-Ce projet contient :
-+ Exo06 : banque p1
+Ce projet contient les classes suivantes:
++ Accueil
++ Article
++ User
++ UserQuality
